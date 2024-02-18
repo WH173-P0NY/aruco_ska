@@ -54,8 +54,8 @@ while True:
         for id_znacznika in wspolne_id:
             index_lewy = np.where(id_znacznikow_lewa == id_znacznika)[0][0]
             index_prawy = np.where(id_znacznikow_prawa == id_znacznika)[0][0]
-            srodek_lewy = np.mean(rogowe_punkty_lewa[index_lewy][0], axis=0)
-            srodek_prawy = np.mean(rogowe_punkty_prawa[index_prawy][0], axis=0)
+            srodek_lewy = np.mean(punkty_lewa[index_lewy][0], axis=0)
+            srodek_prawy = np.mean(punkty_prawa[index_prawy][0], axis=0)
             delta_x = np.abs(srodek_lewy[0] - srodek_prawy[0])
             odleglosc = oblicz_odleglosc(ogniskowa_px, rozstaw_kamer, delta_x)
             print(f"ID znacznika: {id_znacznika}, Odległość: {odleglosc:.2f} mm")
